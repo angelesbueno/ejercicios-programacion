@@ -1,2 +1,2 @@
-# ejercicios-programacion
-Ejercicios de programación 1ª DAW
+#Ejercicios-programacion
+Ejercicios de la asignatura de Programación de 1º DAW 
