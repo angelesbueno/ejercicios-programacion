@@ -38,6 +38,6 @@ java HolaMundo
 
 ## Bibliografía
 
-<img src="img/portada.jpeg">
+<img src="img/portada.jpeg" width="250px">
 
 [Aprende Java con ejercicios](https://leanpub.com/aprendejava)
