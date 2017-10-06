@@ -28,14 +28,16 @@ java HolaMundo
 
 ```
 
+
 ## Qué se estudia en Programación
 
 * Lenguaje de programación Java
 * Comandos de Linux
 * Git y Github
 
+
 ## Bibliografía
 
-<img src="img/portada.jpg">
+<img src="img/portada.jpeg">
 
 [Aprende Java con ejercicios](https://leanpub.com/aprendejava)
