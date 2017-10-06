@@ -11,7 +11,8 @@ A continuación se muestra el programa *"Hola Mundo"* en Java.
 
 public class HolaMundo { //Clase principal
 	public static void main(String[] args) {
-		System.out.print("¡Hola mundo!");
+		String morado="\033[35m";
+		System.out.print(morado+"¡Hola mundo!");
 	}
 }
 ```
