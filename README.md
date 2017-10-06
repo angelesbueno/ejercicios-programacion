@@ -21,9 +21,21 @@ Para compilar el programa teclea lo siguiente:
 javac HolaMundo.java
 ```
 
-Puedes ejecutar el programa mediante el siguiente comando:
+Puedes ejecutar el programa mediante el comando `java`:
 
 ```console
 java HolaMundo
 
 ```
+
+## Qué se estudia en Programación
+
+* Lenguaje de programación Java
+* Comandos de Linux
+* Git y Github
+
+## Bibliografía
+
+<img src="img/portada.jpg">
+
+[Aprende Java con ejercicios](https://leanpub.com/aprendejava)
