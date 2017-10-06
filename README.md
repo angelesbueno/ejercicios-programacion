@@ -31,7 +31,7 @@ java HolaMundo
 
 ## Qué se estudia en Programación
 
-* Lenguaje de programación Java :java:
+* Lenguaje de programación Java :muscle:
 * Comandos de Linux  :clap:
 * Git y Github  :two_women_holding_hands:
 
