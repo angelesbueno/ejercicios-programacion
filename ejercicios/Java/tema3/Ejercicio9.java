@@ -9,10 +9,11 @@
 
 public class Ejercicio9 {
   public static void main(String[] args) {
-    System.out.print("Escribe un número que sea el área del círculo de la base:");
-    int area = Integer.parseInt(System.console().readLine());
-    System.out.print("Escribe un número que sea la altura del cono:");
+    System.out.print("Introduce el radio de la base del cono en cm: ");
+    int radio = Integer.parseInt(System.console().readLine());
+    System.out.print("Introduce la altura del cono en cm: ");
     int altura = Integer.parseInt(System.console().readLine());
-    System.out.print("El volumen del cono es " + (area*altura/3));
+    //Corrección incompleta, seguir a partir de aquí.
+    
   }
 }
