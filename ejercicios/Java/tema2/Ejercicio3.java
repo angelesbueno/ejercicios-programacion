@@ -1,3 +1,15 @@
+/**
+ * 2. Variables.
+ *
+ * 3. Crea las variables nombre, direccion y telefono y asígnale los valores 
+ *    correspondientes. Muestra los valores de esas variables por pantalla de tal 
+ *    forma que el resultado del programa sea el mismo que en el ejercicio 2.
+ *
+ * @author Ángeles Bueno
+ */
+
+
+
 public class Ejercicio3 {
   public static void main(String [] args) {
     String nombre= "Ángeles Bueno Aguilar";
