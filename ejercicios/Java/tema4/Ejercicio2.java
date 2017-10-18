@@ -15,7 +15,7 @@
     System.out.print("Introduce una hora del día sin minutos: ");
     int hora = Integer.parseInt(System.console().readLine());
     
-    String buenas;
+  
     
     if ((hora >= 6) && (hora <= 12)) {
       System.out.println("¡Buenos días!");
