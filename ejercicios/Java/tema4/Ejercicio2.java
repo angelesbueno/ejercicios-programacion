@@ -33,9 +33,9 @@
       System.out.println("¡Buenas noches!");
     }
     
-    //else {
-      //System.out.println("Esa hora no existe");
-    //
+    if (hora >=25) {
+      System.out.println("¡Esa hora no existe!");
+    }
     
   
   }
