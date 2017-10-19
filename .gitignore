@@ -3,3 +3,7 @@
 
 # Clases compiladas
 *.class
+
+# Archivos comprimidos
+*.rar
+*.zip
