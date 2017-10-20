@@ -106,7 +106,10 @@ public class Ejercicio12 {
       respuestaFinal10 = 0;
     }
     
-    System.out.print("Tu puntuación es de " + (respuestaFinal1 + respuestaFinal2 + respuestaFinal3 + respuestaFinal4 + respuestaFinal5 + respuestaFinal6 + respuestaFinal7 + respuestaFinal8 + respuestaFinal9 + respuestaFinal10) + " puntos.");
+    System.out.print("Tu puntuación es de " + (respuestaFinal1 + respuestaFinal2
+    + respuestaFinal3 + respuestaFinal4 + respuestaFinal5 + respuestaFinal6 
+    + respuestaFinal7 + respuestaFinal8 + respuestaFinal9 + respuestaFinal10) 
+    + " puntos.");
     
   }
 }

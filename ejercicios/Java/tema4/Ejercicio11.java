@@ -21,13 +21,13 @@ public class Ejercicio11 {
     
     
     if ((hora >= 0) && (hora <= 23)) { 
-    System.out.print("Faltan " +  (segundosDia - (hora * segundosHora)) + " segundos para acabar el día");
+      System.out.print("Faltan " +  (segundosDia - (hora * segundosHora)) + " segundos para acabar el día");
     } else {
         System.out.print("Ese horario no existe.");
       }
       
     if ((minutos <=0) && (minutos >=59)) {
-    System.out.print("Ese horario no existe.");
+      System.out.print("Ese horario no existe.");
     } else {
       }
       
