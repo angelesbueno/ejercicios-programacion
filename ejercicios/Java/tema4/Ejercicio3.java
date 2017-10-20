@@ -13,7 +13,7 @@ public class Ejercicio3 {
     System.out.print("Escribe un número del 1 al 7: ");
     int numero = Integer.parseInt(System.console().readLine());
     
-    String dia;
+    String dia = "";
     
     switch (numero) {
       
@@ -46,11 +46,15 @@ public class Ejercicio3 {
       break;
       
       default:
-      dia = "Te dije entre el 1 y el 7";
-      break;
+      
     }
     
-    System.out.println("El número " + numero + " corresponde al " + dia + ".");
-    //Si pongo más de un 7 me sale la frase de error y la correcta, ¿por qué?//
+    if ((numero >=1) && (numero <=7)) {
+      System.out.print("El número " + numero + " corresponde al día " + dia + " .");
+    } else {
+      System.out.print("Te dije un número entre el 1 y el 7.");
+    }  
+    
+      
   }
 }
