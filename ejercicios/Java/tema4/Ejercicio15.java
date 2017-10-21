@@ -99,9 +99,18 @@ public class Ejercicio15 {
         
       default:
       
-        System.out.println("Esa opción no existe");
+        
       
     }
+    
+    /** cómo poner mensaje de error de símbolo si es distinto a "+, -, *, $ ó &". */
+      
+    
+    
+    if (opcion > 4) {
+      System.out.println("Lo siento, esa opción del menú no está disponible");
+    }
+
   }
 }
         
