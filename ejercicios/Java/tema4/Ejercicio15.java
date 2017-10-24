@@ -16,7 +16,7 @@ public class Ejercicio15 {
     
     System.out.println("Vamos a pintar una pirámide");
     System.out.println("");
-    System.out.print("Elige y escribe un símbolo entre *, +, -, $ ó &: ");
+    System.out.print("Elige y escribe cualquier caracter: ");
     String simb = System.console().readLine();
     System.out.println("");
     System.out.println("Ahora escoge entre una de estas opciones:");
