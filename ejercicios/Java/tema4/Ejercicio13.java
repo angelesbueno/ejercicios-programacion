@@ -38,7 +38,11 @@
               System.out.print("El orden descendente es: " + numero3 + ", " + numero1 +
               " y " + numero2 + ".");
               
-            }
+            } else if ((numero3 > numero2) && (numero2 > numero1)) {
+                System.out.print("El orden descendente es: " + numero3 + ", " + numero2 +
+                " y " + numero1 + ".");
+              } 
+                
         
   }
 }
