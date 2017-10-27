@@ -9,3 +9,8 @@
 public class Ejercicio9 {
   public static void main(String[] args) {
     
+    System.out.print("Introduce un número entero de tantas cifras como quieras: ");
+    int num = Integer.parseInt(System.console().readLine());
+    
+    
+    
