@@ -15,8 +15,31 @@ public class Ejercicio7 {
   
   
     int combiOk = 2610;
+    int intentos = 4;
+    int combi1;
     
-    System.out.print("Introduce la combinación de la caja fuerte: ");
-    int combi1 = Integer.parseInt(System.console().readLine());
+    do {
+      System.out.print("Introduce la combinación de la caja fuerte: ");
+      combi1 = Integer.parseInt(System.console().readLine());
+      
+      if (combi1 == combiOk) {
+        System.out.print("La caja fuerte se ha abierto satisfactoriamente.");
+        
+      } else {
+          System.out.println("Lo siento, esa no es la combinación correcta");
+          intentos--;
+          System.out.println("Te quedan " + intentos + " intentos");
+          
+        }
+    } while ((intentos > 0) && (combiOk !=combi1));
+    
+    if (intentos == 0) {
+      System.out.println("Has bloqueado la caja fuerte, the police is coming...");
+    }
+      
+  }
+}
+      
+        
     
     
