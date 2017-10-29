@@ -77,7 +77,7 @@ public class Ejercicio23 {
     
     /** no sale bien ni el meno5 ni el 5porc */
   }
-}
+
     
     
      
