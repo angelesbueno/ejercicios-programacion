@@ -13,7 +13,7 @@ public class Ejercicio18 {
     
     System.out.print("Introduce un número y te diré cual es su primera cifra, se permiten números de hasta 5 cifras: ");
     int numero = Integer.parseInt(System.console().readLine());
-    /**System.out.println("La última cifra del número " + numero + " es: " + (numero % 10));*/
+    
     
     if (numero < 10) {
       System.out.println("La primera cifra del número " + numero + " es: " + numero);
