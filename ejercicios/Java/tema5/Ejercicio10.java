@@ -33,6 +33,11 @@ public class Ejercicio10 {
       suma += num;
     }
     
+    if ((contador > 0) && (num < 0)) {
+      System.out.print("La media es el número introducido antes del número negativo.");
+    }
+      
+    
     if ((num < 0) && (contador > 1)) {
       System.out.print("La media de todos los números positivos es de: " + (suma - num) / (contador - 1));
     }
