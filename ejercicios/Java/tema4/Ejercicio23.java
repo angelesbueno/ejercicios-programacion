@@ -57,25 +57,25 @@ public class Ejercicio23 {
       break;
       
       case "meno5":
-      codProFinal = ((baseImponible + (baseImponible * ivaNum / 100)) - 5);
+      codProFinal = 5;
       break;
       
       case "5porc":
-      codProFinal = ((baseImponible + (baseImponible * ivaNum / 100)) - ((baseImponible + (baseImponible * ivaNum / 100)) * 0.05));
+      codProFinal = ((baseImponible + (baseImponible * ivaNum / 100)) * 0.05);
       break;
       
       default:
     }
     
     System.out.println("");
-    System.out.println("Base imponible                                       " + baseImponible);
-    System.out.println("IVA                                        " + ivaNum);
-    System.out.println("Código promocional                               " + codPro);
-    System.out.println("---------------------------------------------------------");
-    System.out.println("Precio final                                 " + ((baseImponible + (baseImponible * ivaNum / 100)) - codProFinal));
+    System.out.println("Base imponible                                         " + baseImponible);
+    System.out.println("IVA                                                    " + ivaNum);
+    System.out.println("Código promocional                                     " + codPro);
+    System.out.println("-----------------------------------------------------------------");
+    System.out.println("Precio final                                               " + ((baseImponible + (baseImponible * ivaNum / 100)) - codProFinal));
     
     
-    /** no sale bien ni el meno5 ni el 5porc */
+    
   }
 }
 
