@@ -18,7 +18,7 @@ public class Ejercicio12 {
     
     int termino1 = 0;
     int termino2 = 1;
-    int termino3 = 0;
+    int termino3;
     
     if (contador == 0) {
       System.out.print("No te enseño nada");
