@@ -19,16 +19,21 @@ public class Ejercicio15 {
     System.out.print("Introduce el exponente de ese número (entero positivo): ");
     int exponenteFinal = Integer.parseInt(System.console().readLine());
     
-    double potencia;
     int exponente = 1;
+    double potencia = base * base;
     
-    do {
-      System.out.println(base + "^" + exponente + "=" + Math.pow(base,exponente));
-      exponente ++;
-    
-    } while (exponente <= exponenteFinal);
+    for (int i = 1; i <= exponenteFinal; i++) {
+      System.out.println(base + "^" + exponente + "=" + potencia);
+      exponente++;
+      potencia = potencia*base;
+    }
   }
 }
+      
+      
+      
+    
+   
       
   
     
