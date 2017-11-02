@@ -16,12 +16,38 @@ public class Ejercicio14 {
     System.out.print("Introduce el exponente de ese número (entero positivo): ");
     int exponente = Integer.parseInt(System.console().readLine());
     
-    /**potencia de un número = Math.pow(base,exponente);
-     * ese término es double, si quiero mostrarlo como entero --> casting (int)*/
+    if (exponente == 0) {
+      System.out.print("La potencia de " + base + " es " + " 1 ");
+      
+    }
     
-    System.out.print("La potencia es " + (int)Math.pow(base,exponente));
+    if (exponente == 1) {
+      System.out.print("La potencia de " + base + " es " + +base);
+    }
+    
+    
+    if (exponente > 1) {
+      
+      double potencia = base;
+
+      
+      
+      for (int i = 2; i <= exponente; i++) {
+        potencia = potencia * base;
+        
+        
+        
+      }
+      
+      System.out.print(base + "^" + exponente + "=" + potencia);
+      
+      
+    }
   }
 }
+        
+      
+
     
     
     
