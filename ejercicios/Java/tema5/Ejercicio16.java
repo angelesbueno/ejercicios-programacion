@@ -13,6 +13,29 @@ public class Ejercicio16 {
     System.out.print("Introduce un número y te diré si es primo o no: ");
     int numero = Integer.parseInt(System.console().readLine());
     
+    int i = 2;
+    boolean esPrimo = true;
+    
+    while (i < numero) {
+      if ((numero % i) == 0) {
+        esPrimo = false;
+        
+      }
+      i++; 
+    } // while 
+    
+    if (esPrimo) {
+      System.out.println("El número " + numero + " es primo.");
+    } else {
+      System.out.println("El número " + numero + " no es primo.");
+    }
+    
+    
+  }
+}
+        
+      
+    
 
       
     
