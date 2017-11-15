@@ -7,42 +7,40 @@
  *
  * @author Ángeles Bueno
  */
-//sumar todos los números entre dos números introducidos por teclado
+ 
 public class Ejercicio17 {
   public static void main(String[] args) {
     
-    System.out.print("Introduce el primer número: ");
-    int num1 = Integer.parseInt(System.console().readLine());
-    
-    System.out.print("Introduce el segundo número: ");
-    int num2 = Integer.parseInt(System.console().readLine());
-    
-    int i = num1;
-    
     int suma = 0;
+    int numeroIntroducido = 0;
     
-    while (i < num2) {   //i = 3    num2 = 5    suma = 2
+    System.out.print("Introduce un número entero y positivo: ");
+    numeroIntroducido = Integer.parseInt(System.console().readLine()); 
     
+    if (numeroIntroducido < 0) {
       
-      suma += i;
-      i++;
+      System.out.print("Ese número no es correcto, debe ser un número positivo.");
       
-    }
-    
-    System.out.print("El valor total e la suma es :" + suma);
-    
+    } else {
+      
+        for (int i = numeroIntroducido + 1; i <= numeroIntroducido + 101; i++) {
+          
+          suma += i;
+        
+        }
+        
+      System.out.print("La suma de los 100 números siguientes a " + numeroIntroducido + " es: " + suma); 
+      
+      }
+      
+     
+     
+  
   }
+  
 }
-    
-    
-    
-    
-    
+          
+          
+          
+          
       
-    
-    
-    
-
-
-
-
