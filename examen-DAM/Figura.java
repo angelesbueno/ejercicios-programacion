@@ -55,12 +55,13 @@ public class Figura {
     }
     
     System.out.print("*");
-    System.out.print("   ");
     
-    for (int i = 1; i <= espacios; i++) {
+    
+    for (int i = 1; i <= espaciosInternos; i++) {
       System.out.print(" ");
-    }
-    
+      }
+      
+    System.out.print("   ");
     System.out.print("*");
     System.out.print("   ");
     
