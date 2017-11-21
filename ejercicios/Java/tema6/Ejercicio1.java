@@ -12,11 +12,42 @@ public class Ejercicio1 {
   
     int suma = 0;
     int contador = 1;
+    String dibujo = "";
   
     for (int i = 0; i < 3; i++) {
       
       int dado = ((int)(Math.random()*6) + 1 );
-      System.out.println("Dado " + contador + ": " + dado);
+      
+      switch (dado) {
+        case 1:
+        dibujo = "⚀";
+        break;
+        
+        case 2:
+        dibujo = "⚁";
+        break;
+        
+        case 3:
+        dibujo = "⚂";
+        break;
+        
+        case 4:
+        dibujo = "⚃";
+        break;
+        
+        case 5:
+        dibujo = "⚄";
+        break;
+        
+        case 6: 
+        dibujo ="⚅";
+        break;
+        
+        default:
+      }
+      
+      
+      System.out.println("Dado " + contador + ": " + dado + " " + dibujo);
       suma += dado;
       contador ++;
       dado = 0;
