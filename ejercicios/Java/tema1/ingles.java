@@ -13,8 +13,6 @@
 
 public class ingles {
   public static void main(String[] args) {
-    System.out.printf("%-10s %s\n %s\n %s\n %s\n %s\n", "Horas", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes");
-    System.out.println("------------------------------------------------------------------------------------");
     System.out.printf("%-10s %s\n", "Goodbye", "Adios");
     System.out.printf("%-10s %s\n", "Day", "Día");
     System.out.printf("%-10s %s\n", "Hour", "Hora");
