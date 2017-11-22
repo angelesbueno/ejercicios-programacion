@@ -11,5 +11,57 @@
  
 public class Ejercicio10 {
   public static void main(String[] args) {
+    
+    for (int i = 0; i < 10; i++) {
+      
+      int num = ((int)(Math.random()*6));
+      String caracter = String.valueOf(num);
+      
+      
+      switch (caracter) {
+        
+        case "0":
+        
+        caracter = "*";
+        break;
+        
+        case "1":
+        
+        caracter = "-";
+        break;
+        
+        case "2":
+        
+        caracter = "=";
+        break;
+        
+        case "3":
+        
+        caracter = ".";
+        break;
+        
+        case "4":
+        caracter = "|";
+        break;
+        
+        case "5":
+        
+        caracter = "@";
+        break;
+        
+        default:
+      }
+      
+      int num2 = ((int)(Math.random()*40) + 1);
+      
+      for (int j = 0; j <= num2; j++) {
+        
+        System.out.print(caracter);
+      }
+      
+      System.out.println();
+    }
+  }
+}
   
     
