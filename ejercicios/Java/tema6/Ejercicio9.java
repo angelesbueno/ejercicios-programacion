@@ -10,5 +10,29 @@
  
 public class Ejercicio9 {
   public static void main(String[] args) {
+    
+    int numero = 0;
+    int contador = 0;
+    
+    do {
+      
+      System.out.println(numero);
+      contador ++;
+      numero = (int)(Math.random()*100);
+      
+      if (numero % 2 != 0) {
+        numero = numero + 1;
+      }
+      
+        
+    } while (numero != 24);
+    
+    System.out.println();
+    System.out.println("Se ha/n generado " + contador + " número/s");
+    
+  }
+}
+      
+        
   
   
