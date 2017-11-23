@@ -18,11 +18,11 @@ public class Ejercicio8 {
       String columna2 = "";
       String columna3 = "";
         
-      int col1 = ((int)(Math.random()*6) + 1 );
+      int col1 = ((int)(Math.random() * 6) + 1 );
       columna1 = String.valueOf(col1);
-      int col2 = ((int)(Math.random()*6) + 1 );
+      int col2 = ((int)(Math.random() * 6) + 1 );
       columna2 = String.valueOf(col2);
-      int col3 = ((int)(Math.random()*6) + 1 );
+      int col3 = ((int)(Math.random() * 6) + 1 );
       columna3 = String.valueOf(col3);
       
       switch (columna1) {

@@ -71,14 +71,10 @@ public class Ejercicio7 {
         default:
       }
 
-      
       System.out.println(i + ".   " + columna1 + "|" + columna2 + "|" + columna3);
-      
-      
-      
+
     }
-    
-    
+
   }
 }
       

@@ -11,7 +11,6 @@
 public class Ejercicio12 {
   public static void main(String[] args) {
     
-    
     for (long i = 0; i < 600000000; i++) {
     
       int num = ((int)(Math.random()*94) + 32);

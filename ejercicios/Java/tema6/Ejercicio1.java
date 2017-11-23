@@ -20,39 +20,39 @@ public class Ejercicio1 {
       
       switch (dado) {
         case 1:
-        dibujo = "⚀";
-        break;
+          dibujo = "⚀ ";
+          break;
         
         case 2:
-        dibujo = "⚁";
-        break;
+          dibujo = "⚁ ";
+          break;
         
         case 3:
-        dibujo = "⚂";
-        break;
+          dibujo = "⚂";
+          break;
         
         case 4:
-        dibujo = "⚃";
-        break;
+          dibujo = "⚃ ";
+          break;
         
         case 5:
-        dibujo = "⚄";
-        break;
+          dibujo = "⚄ ";
+          break;
         
         case 6: 
-        dibujo ="⚅";
-        break;
+          dibujo = "⚅ ";
+          break;
         
         default:
       }
       
-      
       System.out.println("Dado " + contador + ": " + dado + " " + dibujo);
       suma += dado;
       contador ++;
-      dado = 0;
+  
     }
     
+    System.out.println();
     System.out.println("Suma: " + suma);
 
   }

@@ -13,7 +13,7 @@
 public class Ejercicio2 {
   public static void main(String[] args) {
     
-    int num1 = ((int)(Math.random()*4));
+    int num1 = ((int)(Math.random() * 4));
     String palo = "";
     palo = String.valueOf(num1);
     
