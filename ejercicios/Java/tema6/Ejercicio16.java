@@ -111,6 +111,7 @@ public class Ejercicio16 {
         moneda --;
         System.out.println("Le queda/n " + moneda + " moneda/s");
         System.out.println();
+        System.console().readLine();
       }
       
       if (((tirada1 == tirada2) && (tirada2 != tirada3)) || ((tirada2 == tirada3) && (tirada3 != tirada1)) || ((tirada1 == tirada3) && (tirada1 != tirada2))) {
@@ -120,6 +121,7 @@ public class Ejercicio16 {
         System.out.println("Bien, ha recuperado su moneda");
         System.out.println("Le queda/n " + moneda + " moneda/s");
         System.out.println();
+        System.console().readLine();
       }
       
       
@@ -132,6 +134,7 @@ public class Ejercicio16 {
         moneda += 10; 
         System.out.println("Le queda/n " + moneda + " moneda/s");
         System.out.println();
+        System.console().readLine();
       }
       
     } while (moneda >= 1);
