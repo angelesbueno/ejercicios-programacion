@@ -22,7 +22,7 @@ public class Ejercicio16 {
         
       }
       i++; 
-    } // while 
+    }
     
     if (esPrimo) {
       System.out.println("El número " + numero + " es primo.");
