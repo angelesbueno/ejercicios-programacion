@@ -31,12 +31,52 @@ public class Ejercicio10 {
     int [] numeroPar = new int[contadorPar];
     int [] numeroImpar = new int[contadorImpar];
     
-    for (int i = 0; i < contadorPar; i++) {
-      System.out.print(numeroPar[i] + " ");
+    System.out.println("Serie original:");
+    
+    for (int i = 0; i < 20; i++) {
+      System.out.print(numero[i] + " ");
     }
     
-    for (int i = 0; i < contadorImpar; i++) {
-      System.out.print(numeroImpar[i] + " ");
+    System.out.println();
+    
+    int j = 0;
+    int i = 0;
+    
+    do {
+      
+      if (numero[i] % 2 == 0) {
+        
+        numeroPar[j] = numero[i];
+        j++;
+      
+      }
+      i++;
+      
+    } while (j < contadorPar);
+    
+    j = 0;
+    i = 0;
+    
+    do {
+      
+      if (numero[i] % 2 != 0) {
+        
+        numeroImpar[j] = numero[i];
+        j++;
+      
+      }
+      i++;
+      
+    } while (j < contadorImpar);
+    System.out.println();
+    System.out.println("Serie ordenada (primero los pares y después los impares) :");
+
+    for (int k = 0; k < contadorPar; k++) {
+      System.out.print(numeroPar[k] + " ");
+    }
+    
+    for (int l = 0; l < contadorImpar; l++) {
+      System.out.print(numeroImpar[l] + " ");
     }
   }
 }
