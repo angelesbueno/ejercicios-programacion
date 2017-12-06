@@ -11,9 +11,9 @@ public class Ejercicio24 {
   public static void main(String[] args) {
     
     System.out.print("Por favor, introduzca un número entero positivo: ");
-    long numeroIntroducido = Integer.parseInt(System.console().readLine());
-    long auxiliar = numeroIntroducido;
-    long digito = 0;
+    int numeroIntroducido = Integer.parseInt(System.console().readLine());
+    int auxiliar = numeroIntroducido;
+    int digito = 0;
     int contadorDigitos = 0;
     
     while (numeroIntroducido >= 1) {
@@ -22,10 +22,9 @@ public class Ejercicio24 {
       contadorDigitos ++;
       numeroIntroducido /= 10;
     }
+
     
-    System.out.println(contadorDigitos);
-    
-    long [] numero = new long[contadorDigitos];
+    int [] numero = new int[contadorDigitos];
     int j = 0;
     
     while (auxiliar >= 1) {
@@ -35,20 +34,13 @@ public class Ejercicio24 {
       j ++;
     }
     
-    long numAzar = ((long)(Math.random() * contadorDigitos));
+    int numAzar = ((int)(Math.random() * contadorDigitos));
     
-    System.out.println(numAzar);
-    
-    //mal, preguntar.
-    
-    
-    /**for (int i = 0; i < contadorDigitos; i ++) {
-        
-      System.out.print(numero[i] + " ");*/
-    
+    System.out.println(numero[numAzar]);
   }
 }
     
+ 
 
       
       
