@@ -80,7 +80,3 @@ public class Ejercicio10 {
     }
   }
 }
-
-// me da todo 0, revisar;
-    
-    
