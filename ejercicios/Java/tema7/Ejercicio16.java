@@ -12,3 +12,43 @@
  
 public class Ejercicio16 {
   public static void main(String[] args) {
+    
+    int [] numero = new int[20];
+    
+    for (int i = 0; i < 20; i++) {
+      numero[i] = (int)(Math.random() * 401);
+    }
+    
+    for (int i = 0; i < 20; i++) {
+      System.out.print(numero[i] + " ");
+    }
+    System.out.println();
+    System.out.println();
+    System.out.print("¿Qué números quiere resaltar? (1 - los múltiplos de 5, 2 - los múltiplos de 7): ");
+    int eleccion = Integer.parseInt(System.console().readLine());
+    System.out.println();
+    System.out.println();
+    
+    if (eleccion == 1) {
+    
+      for (int i = 0; i < 20; i++) {
+        
+        if (numero[i] % 5 == 0) {
+          System.out.print("[" + numero[i] + "] ");
+        } else {
+          System.out.print(numero[i] + " ");
+        }
+      }
+    } else {
+      
+      for (int i = 0; i < 20; i++) {
+        
+        if (numero[i] % 7 == 0) {
+          System.out.print("[" + numero[i] + "] ");
+        } else {
+          System.out.print(numero[i] + " ");
+        }
+      }
+    }
+  }
+}
