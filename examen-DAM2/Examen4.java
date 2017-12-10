@@ -39,49 +39,35 @@ public class Examen4 {
         while (altura <= alturaMedia) {
           
           System.out.print("*");
-          
+          int q = 0;
+          int k = 0;
           for (int j = 1; j <= espacios; j++) {
             
             if ((j == anchuraPez) && (altura == alturaPez)) {
               
               System.out.print("&");
-            
-            } else {
-              
-                System.out.print(" "); 
-              }
-          }
-          
-          for (int j = 1; j <= espacios; j++) {
-            espacios = anchuraIntroducida - 2;
-            
-            if ((j == anchuraCaracola) && (altura == alturaCaracola)) {
+             
+            }else if ((j == anchuraCaracola) && (altura == alturaCaracola)) {
               
               System.out.print("@");
-            
-            } else {
-              
-                System.out.print(" "); 
-              }
-          }
-          
-          for (int j = 1; j <= espacios; j++) {
-            espacios = anchuraIntroducida - 2;
-            
-            if ((j == anchuraCaballito) && (altura == alturaCaballito)) {
+
+             
+            }else if ((j == anchuraCaballito) && (altura == alturaCaballito)) {
               
               System.out.print("$");
             
             } else {
               
-                System.out.print(" "); 
-              }
+              System.out.print(" "); 
+            }
+            q ++;
+            k ++;
           }
+          
           System.out.print("*");
           System.out.println();
           altura ++;
         }
-        
       altura ++;  
     }
   }
