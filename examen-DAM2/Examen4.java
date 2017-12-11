@@ -8,67 +8,52 @@
 public class Examen4 {
   public static void main(String[] args) {
     
+    System.out.println("Este programa pinta una pecera con un pez");
     System.out.print("Por favor, introduzca la altura de la pecera (como mínimo 4): ");
-    int alturaIntroducida = Integer.parseInt(System.console().readLine());
+    int alturaIntroducida = Integer.parseInt(System.console().readLine()); 
+    System.out.print("\nAhora introduzca la anchura (como mínimo 4): ");
+    int anchura = Integer.parseInt(System.console().readLine()); 
+    System.out.println();
+    int altura = 1;//para controlar la altura actual de la imagen
+    int espacios = 1;
     
-    System.out.print("Ahora introduzca la anchura (como mínimo 4): ");
-    int anchuraIntroducida = Integer.parseInt(System.console().readLine());
+    int pez = 0;
+    int caracola = 0;
+    int caballito = 0;
+    
+    while((pez == caracola) || (caracola == caballito) || (pez == caballito)){
+      pez = (int)(Math.random()*(anchura-2) * (alturaIntroducida-2)+1);
+      caracola = (int)(Math.random()*(anchura-2) * (alturaIntroducida-2)+1);
+      caballito = (int)(Math.random()*(anchura-2) * (alturaIntroducida-2)+1);
+    }
+    
+    for(int i = 1; i <= anchura; i++){
+      System.out.print("*");
+    }
+    altura++;
     System.out.println();
     
-    int altura = 0;
-    int alturaMedia = alturaIntroducida - 2;
-    int espacios = anchuraIntroducida - 2;
-    int anchuraPez = ((int)(Math.random() * espacios) + 1);
-    int alturaPez = ((int)(Math.random() * alturaMedia) + 1);
-    int anchuraCaracola = ((int)(Math.random() * espacios) + 1);
-    int alturaCaracola = ((int)(Math.random() * alturaMedia) + 1);
-    int anchuraCaballito = ((int)(Math.random() * espacios) + 1);
-    int alturaCaballito = ((int)(Math.random() * alturaMedia) + 1);
-
-
-    while (altura <= alturaIntroducida) {
-    
-      for (int i = 1; i <= anchuraIntroducida; i++) {
-          
-          System.out.print("*");
-      }
-
-      altura ++;
-      System.out.println();
-      
-        while (altura <= alturaMedia) {
-          
-          System.out.print("*");
-          int q = 0;
-          int k = 0;
-          for (int j = 1; j <= espacios; j++) {
-            
-            if ((j == anchuraPez) && (altura == alturaPez)) {
-              
-              System.out.print("&");
-             
-            }else if ((j == anchuraCaracola) && (altura == alturaCaracola)) {
-              
-              System.out.print("@");
-
-             
-            }else if ((j == anchuraCaballito) && (altura == alturaCaballito)) {
-              
-              System.out.print("$");
-            
-            } else {
-              
-              System.out.print(" "); 
-            }
-            q ++;
-            k ++;
-          }
-          
-          System.out.print("*");
-          System.out.println();
-          altura ++;
+    int espaciosInternos = anchura -2;
+    while (altura < alturaIntroducida){
+      System.out.print("*");
+      for(int i = 1; i <= espaciosInternos; i++){
+        if(espacios == pez){
+          System.out.print("&");
+        }else if(espacios == caracola){
+          System.out.print("@");
+        }else if(espacios == caballito){
+          System.out.print("$");
+        }else{
+          System.out.print(" ");
         }
-      altura ++;  
+        espacios++;
+      }
+      System.out.print("*");
+      altura++;
+      System.out.println();
+    }
+    for(int i = 1; i <= anchura; i++){
+      System.out.print("*");
     }
   }
 }
