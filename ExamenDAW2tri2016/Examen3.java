@@ -21,7 +21,6 @@ public class Examen3 {
       contadorDigitos ++;
       numAleatorio /= 10;
     }
-    System.out.println(contadorDigitos);
     int [] numero = new int[contadorDigitos];
     int j = 0;
     
@@ -30,9 +29,9 @@ public class Examen3 {
       auxiliar /= 10;
     }
 
-    for (int i = 0; i < contadorDigitos; i++) {
+    /**for (int i = 0; i < contadorDigitos; i++) {
       System.out.print(numero[i] + " ");
-    }
+    }*/
     System.out.println();
     System.out.println();
     
@@ -79,10 +78,5 @@ public class Examen3 {
         espacios +=2;
       }
     }
-    
-    
-
   }
 }
-    
-    
