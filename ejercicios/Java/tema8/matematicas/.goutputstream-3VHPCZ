@@ -1,0 +1,193 @@
+/**
+ * Funciones matemáticas.
+ *
+ * @author Ángeles Bueno
+ */
+ 
+package matematicas;
+
+public class Funciones {
+  
+  /**
+   * Comprobar si un número es capicúa o no.
+   * Devuelve verdadero si el número que se pasa como parámetro es capicúa y falso en caso contrario.
+   * @param x es un número que quiero saber si es capicúa
+   */
+  public static boolean esCapicua(int x) {
+    int aux = x;
+    int nuevoNumero = 0;
+    
+    while (x > 0) {
+      nuevoNumero = nuevoNumero + x % 10; 
+      nuevoNumero = nuevoNumero * 10;
+      x /= 10;
+    }
+    nuevoNumero /= 10;
+    
+    if(aux == nuevoNumero) { 
+      return true;
+    
+    } else {
+      return false;
+    }
+  }
+  /**
+   * Comprobar si un número es primo o no.
+   * Devuelve verdadero si el número que se pasa como parámetro es primo y falso en caso contrario.
+   * @param x es un número que quiero saber si es primo
+   */
+  public static boolean esPrimo(int x) {
+    for (int i = 2; i < x; i++) { 
+      if ((x % i) == 0) {
+        return false; 
+      }
+    }
+    return true; 
+  }
+  /**
+   * Devuelve el menor primo que es mayor al número que se pasa como parámetro.
+   */
+   
+  //public static int siguientePrimo(int x) {
+  //}
+  
+  /**
+   * Dada una base y un exponente devuelve la potencia.
+   * @param b es la base del número que se quiere saber la potencia
+   * @param e es el exponenete del número que se quiere saber la potencia
+   */
+  public static int potencia(int b, int e) {
+    int potencia = 0;
+    if (b == 0) {
+      potencia = 0;
+    }
+    if (e == 0) {
+      potencia = 0;
+    }
+    if (e == 1) {
+      potencia = base;
+    }
+    if (e > 1) {
+      for (int i = 2; i <= e; i++) {
+        potencia = potencia * b;
+      }
+    }
+    return potencia;
+  }
+  /**
+   * Cuenta el número de dígitos de un número entero.
+   * @param x es el número del que se quiere saber cuántos dígitos tiene
+   */
+  public static int digitos(int x) {
+    int digitos = 1;
+    while (x > 9) {
+      digitos ++;
+      x /= 10;
+    }
+    return digitos;
+  }
+  /**
+   * Le da la vuelta a un número.
+   * @param x es el número que se quiere voltear
+   */
+  public static int voltea(int x) {
+    int voltea = 0;
+    while (x > 0) {
+      voltea = (voltea*10) + x%10;
+      x /= 10;
+    }
+    return voltea;
+  }
+  /**
+   * Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0 y de izquierda a derecha.
+   * @param x es el número del que se quiere extraer el dígito
+   * 
+   */
+   
+  public static int digitoN(int x) {
+    int contador = 0;
+    int posicion = 0;
+    int auxiliar = x;
+    int volteado = 0;
+    
+    while (x > 0) {
+      contador ++;
+      x /= 10;
+    }
+    while (auxiliar > 0) {
+      volteado = (volteado*10) + auxiliar%10;
+      auxiliar /= 10;
+    }
+    int [] numero = new int[contador];
+    int i = 0;
+    
+    while (volteado > 0) {
+      numero[i] = auxiliar % 10;
+      auxiliar /= 10;
+      i ++;
+    }
+    return numero[digitoN];
+  }
+  /**
+   * 8. Da la posición de la primera ocurrencia de un dígito dentro de un número entero. Si no se encuentra, devuelve -1.
+   */
+   
+  public static int posicionDeDigito(int x) {
+  }
+  
+  /**
+   * 9. Le quita a un número n dígitos por detrás (por la derecha).
+   */
+   
+  public static int quitaPorDetras(int x) {
+  }
+  
+  /**
+   * 10. Le quita a un número n dígitos por delante (por la izquierda).
+   */
+   
+  public static int quitaPorDelante(int x) {
+  }
+
+  /**
+   * 11. Añade un dígito a un número por detrás.
+   */
+   
+  public static int pegaPorDetras(int x) {
+    int digito = Integer.parseInt(System.console().readLine());
+    int nuevoNumero = x * 10 + digito;
+    return nuevoNumero;
+  }
+  
+  /**
+   * 12. Añade un dígito a un número por delante.
+   */
+   
+  public static int pegaPorDelante(int x) {
+    
+    int digito = Integer.parseInt(System.console().readLine());
+    int xMasDigito = x * 10 + digito;
+    int nuevoNumero = 0;
+    while (xMasDigito > 0) {
+      nuevoNumero = (nuevoNumero * 10) + xMasDigito % 10;
+      xMasDigito /= 10;
+    }
+    return nuevoNumero;
+  }
+  
+  /**
+   * 13. Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   */
+   
+  public static int trozoDeNumero(int x) {
+  }
+  
+  /**
+   * 14. Pega dos números para formar uno.
+   */
+   
+  public static int juntaNumeros(int x) {
+  }
+    
+    
+}

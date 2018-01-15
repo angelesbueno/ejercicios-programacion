@@ -18,30 +18,19 @@ public class Ejercicio14 {
     
     if (exponente == 0) {
       System.out.print("La potencia de " + base + " es " + " 1 ");
-      
     }
-    
     if (exponente == 1) {
       System.out.print("La potencia de " + base + " es " + +base);
     }
-    
-    
     if (exponente > 1) {
       
       double potencia = base;
-
-      
       
       for (int i = 2; i <= exponente; i++) {
         potencia = potencia * base;
-        
-        
-        
       }
       
       System.out.print(base + "^" + exponente + "=" + potencia);
-      
-      
     }
   }
 }
