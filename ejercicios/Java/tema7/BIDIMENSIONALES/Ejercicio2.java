@@ -49,7 +49,7 @@ public class Ejercicio2 {
       
       sumaColumna = 0;
     }
-    System.out.print("   ∑ Total: " + total);
+    System.out.print(" ∑ Total: " + total);
     
   }
 }
