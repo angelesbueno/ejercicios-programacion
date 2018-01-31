@@ -7,7 +7,7 @@
 package matematicas;
 public class Funciones {
   /**
-   * 1. Comprobar si un número es capicúa o no.
+   * Comprobar si un número es capicúa o no.
    * Devuelve verdadero si el número que se pasa como parámetro es capicúa y falso en caso contrario.
    * @param x un número entero positivo
    * @return <code>true</code> si el número es capicúa
@@ -32,7 +32,7 @@ public class Funciones {
     }
   }
   /**
-   * 2. Comprobar si un número es primo o no.
+   * Comprobar si un número es primo o no.
    * Devuelve verdadero si el número que se pasa como parámetro es primo y falso en caso contrario.
    * @param x un número entero positivo
    * @return <code>true</code> si el número es primo
@@ -47,7 +47,7 @@ public class Funciones {
     return true; 
   }
   /**
-   * 3. Devuelve el menor primo que es mayor al número que se pasa como parámetro.
+   * Devuelve el menor primo que es mayor al número que se pasa como parámetro.
    * @param x un número entero positivo
    * @return el menor número primo que es mayor a x
    */
@@ -70,7 +70,7 @@ public class Funciones {
     return siguientePrimo;
   }
   /**
-   * 4. Dada una base y un exponente devuelve la potencia.
+   * Dada una base y un exponente devuelve la potencia.
    * @param base la base de un número entero positivo
    * @param exponente el exponente de una base
    * @return la potencia de una base y su exponente
@@ -94,20 +94,20 @@ public class Funciones {
     return potencia;
   }
   /**
-   * 5. Cuenta el número de dígitos de un número entero.
+   * Cuenta el número de dígitos de un número entero.
    * @param x un número entero positivo
    * @return la cantidad de dígitos de x
    */
   public static int digitos(int x) {
-    int digitos = 0;
-    while (x > 0) {
+    int digitos = 1;
+    while (x > 9) {
       digitos ++;
       x /= 10;
     }
     return digitos;
   }
   /**
-   * 6. Le da la vuelta a un número.
+   * Le da la vuelta a un número.
    * @param x un número entero positivo
    * @return x dado la vuelta
    */
@@ -120,7 +120,7 @@ public class Funciones {
     return voltea;
   }
   /**
-   * 7. Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0 y de izquierda a derecha.
+   * Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0 y de izquierda a derecha.
    * @param x un número entero positivo
    * @param posicion un número entero positivo que determina el dígito que queremos extraer
    * @return el dígito que está en la posición solicitada
@@ -142,11 +142,28 @@ public class Funciones {
   /**
    * 8. Da la posición de la primera ocurrencia de un dígito dentro de un número entero. Si no se encuentra, devuelve -1.
    */
-   
-  //public static int posicionDeDigito(int x) {
-  //}
+  public static int posicionDeDigito(int x, int digito) {
+    int posicion = -1;
+    int noEncuentra = 0;
+    int volteado = voltea(x);
+    System.out.println(volteado);
+    while (volteado > 0) {
+      if (volteado % 10 == digito) {
+        posicion ++;
+        volteado = 0;
+      } else {
+      noEncuentra ++;
+      }
+      volteado /= 10;
+    }
+    if (noEncuentra == 0) {
+      return -1;
+    } else {
+    return posicion;
+    }
+  } // no sale bien, revisar
   /**
-   * 9. Le quita a un número n dígitos por detrás (por la derecha).
+   * Le quita a un número n dígitos por detrás (por la derecha).
    * @param x un número entero positivo
    * @param digitos un número que determina cuántos digitos se quieren eliminar por la derecha
    * @return x sin los dígitos 
@@ -158,17 +175,13 @@ public class Funciones {
     return x;
   }
   /**
-   * 10. Le quita a un número n dígitos por delante (por la izquierda).
+   * Le quita a un número n dígitos por delante (por la izquierda).
    * @param x un número entero positivo
    * @param digitos un número que determina cuántos digitos se quieren eliminar por la izquierda
    * @return x sin los dígitos  
    */
   public static int quitaPorDelante(int x, int digitos) {
-    int voltea = 0;
-    while (x > 0) {
-      voltea = (voltea*10) + x%10;
-      x /= 10;
-    }
+    int voltea = voltea(x);
     for (int i = 0; i < digitos; i++) {
       voltea /= 10;
     }
@@ -179,7 +192,7 @@ public class Funciones {
     return x;
   }
   /**
-   * 11. Añade un dígito a un número por detrás.
+   * Añade un dígito a un número por detrás.
    * @param x un número entero positivo
    * @param digito un número que que se añade por detrás a x
    * @return x más el dígito añadido por detrás
@@ -189,31 +202,24 @@ public class Funciones {
     return nuevoNumero;
   }
   /**
-   * 12. Añade un dígito a un número por delante.
+   * Añade un dígito a un número por delante.
    * @param x un número entero positivo
    * @param digito un número que que se añade por delante a x
    * @return x más el dígito añadido por delante
    */
   public static int pegaPorDelante(int x, int digito) {
-    int voltea = 0;
-    while (x > 0) {
-      voltea = (voltea*10) + x%10;
-      x /= 10;
-    }
+    int voltea = voltea(x);
     voltea = (voltea * 10) + digito;
-    while (voltea > 0) {
-      x = (x*10) + voltea%10;
-      voltea /= 10;
-    }
+    x = voltea(voltea);
     return x;
   }
   /**
-   * 13. Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    */
   //public static int trozoDeNumero(int x) {
   //}
   /**
-   * 14. Pega dos números para formar uno.
+   * Pega dos números para formar uno.
    */
   //public static int juntaNumeros(int x) {
   //}

@@ -1,0 +1,53 @@
+/**
+ * Examen
+ *
+ * 1. 
+ *
+ * @author Ángeles Bueno
+ */
+ 
+public class ExamenP1 {
+  public static void main(String[] args) {
+    
+    System.out.println("Por favor, vaya introduciendo números enteros positivos. Para terminar, introduzca un número primo: ");
+    int numIntroducido = Integer.parseInt(System.console().readLine());
+    
+    int i = 2;
+    boolean esPrimo = true;
+    int contadorNoPrimos = 0;
+    
+    while (esPrimo) {
+    int numIntroducido = Integer.parseInt(System.console().readLine());  
+    
+    while (i < numIntroducido) {
+      
+      if ((numIntroducido % i) == 0){
+        esPrimo = false;
+        
+      }
+      i++;
+    }
+    
+    if (esPrimo) {
+      
+      esPrimo = false;
+    
+    } else {
+      
+        esPrimo = true;
+        contadorNoPrimos++;
+        
+      }
+      
+      
+        
+        
+      
+
+    
+    
+      
+
+    
+    
+  
