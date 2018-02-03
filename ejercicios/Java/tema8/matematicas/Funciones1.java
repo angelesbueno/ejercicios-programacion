@@ -142,11 +142,22 @@ public class Funciones {
   /**
    * 8. Da la posición de la primera ocurrencia de un dígito dentro de un número entero. Si no se encuentra, devuelve -1.
    */
-  public static int posicionDeDigito(int n, int digito) {
-    int i;
-    for (i = 0; (i < digitos(n)) && (digitoN(n, i) != digito); i++) {
-    }
-    return i == digitos(n) ? i : -1;
+  public static int posicionDeDigito(int x, int y) {
+    
+    int z = matematicas.Funciones.voltea(x);
+    int cifra;
+    int posicion = 0;
+    
+    do {
+      cifra = z % 10;
+      z /= 10;
+      if (cifra == y) {
+        return posicion;
+      }
+      posicion++;
+    } while (z > 0);
+    
+    return -1;
   }
   /**
    * Le quita a un número n dígitos por detrás (por la derecha).
