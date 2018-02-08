@@ -18,9 +18,13 @@ public class Caballo {
   String raza;
   String sillaDeMontar;
   Persona jinete;
+  String sexo;
 
   public Caballo(String nombre) {
     this.nombre = nombre;
+  }
+  
+  public Caballo() {
   }
   
   public String getNombre() {
@@ -41,6 +45,10 @@ public class Caballo {
 
   public void setAltura(int altura) {
     this.altura = altura;
+  }
+
+  public void setSexo(String sexo) {
+    this.sexo = sexo;
   }
 
   public String getColor() {
@@ -82,11 +90,48 @@ public class Caballo {
   public void setJinete(Persona jinete) {
     this.jinete = jinete;
   }
-  
-  
 
+  public String getSexo() {
+    return sexo;
+  }
+
+  
   @Override
   public String toString() {
-    return "Caballo\n --------\n" + "nombre: " + nombre + "\npeso: " + peso + "\naltura: " + altura + "\ncolor: " + color + "\nvelocidad: " + velocidad + "\nraza: " + raza + "\nsillaDeMontar: " + sillaDeMontar;
+    return "Caballo\n --------\n" 
+    + "nombre: " + nombre 
+    + "\npeso: " + peso 
+    + "\naltura: " + altura
+    + "\ncolor: " + color
+    + "\nvelocidad: " + velocidad
+    + "\nraza: " + raza
+    + "\nsillaDeMontar: " + sillaDeMontar;
+  }
+  
+  // setter y getter de cría
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+  
+  
+  
+  public Caballo seApareaCon(Caballo pareja, String nombreSiHembra, String nombreSiMacho) { // este método devuelve otro objeto de la clase caballo (por eso pongo CAballo al principio
+    
+    if ((this.sexo).equals(pareja.getSexo())) {
+      System.out.println("Lo siento, no podemos tener crías, podemos adoptar");
+      return null; // como no devuelve objeto porque no han tenido crías, se devuelve el objeto pero sin valor (null)
+    } else {
+      Caballo cria = new Caballo();
+      
+      if ((int)(Math.random() * 2) == 0) {
+        cria.setSexo("hembra");
+        cria.setNombre(nombreSiHembra);
+      } else {
+        cria.setSexo("macho");
+        cria.setNombre(nombreSiMacho);
+      }
+      return cria;
+    }
   }
 }
