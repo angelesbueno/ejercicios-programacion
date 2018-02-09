@@ -117,7 +117,6 @@ public class Caballo {
   
   
   public Caballo seApareaCon(Caballo pareja, String nombreSiHembra, String nombreSiMacho) { // este método devuelve otro objeto de la clase caballo (por eso pongo CAballo al principio
-    
     if ((this.sexo).equals(pareja.getSexo())) {
       System.out.println("Lo siento, no podemos tener crías, podemos adoptar");
       return null; // como no devuelve objeto porque no han tenido crías, se devuelve el objeto pero sin valor (null)

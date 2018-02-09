@@ -12,38 +12,16 @@ package pooej4;
 public class PruebaFraccion {
   public static void main(String[] args) {
     
-    Fracciones f1 = new Fracciones("f1");
-    Fracciones f2 = new Fracciones("f2");
-    
-    f1.setNumerador(1);
-    f1.setDenominador(3);
-    f2.setNumerador(2);
-    f2.setDenominador(5);
-    
-    System.out.println("La fracción es:");
-    System.out.println(f1.getNumerador());
-    System.out.println("-");
-    System.out.println(f1.getDenominador());
-    System.out.println("");
-    
-    
-    System.out.println("Vamos a invertir la fracción: ");
-    System.out.println("");
-    f1.invierte("hazlo");
-    System.out.println("");
-    f1.invierte("no hagas nada");
-    System.out.println("");
-    
-    System.out.println("Vamos a multiplicar estas dos fracciones: ");
-    System.out.println(f1.getNumerador() + "   " + f2.getNumerador() + "    " + f1.getNumerador() * f2.getNumerador());
-    System.out.println("- x - =  -");
-    System.out.println(f1.getDenominador() + "   " + f2.getDenominador() + "    " + f1.getDenominador() * f2.getDenominador());
-    
-    
-    
-    
-    
-    
+    Fraccion f1 = new Fraccion(1,3);
+    Fraccion f2 = new Fraccion(2,5);
+    Fraccion f3 = new Fraccion(0,0);
+
+    System.out.println(f1);    
+    System.out.println("Vamos a invertir la fracción:");
+    System.out.println(f1.invierte());
+    System.out.println("Vamos a multiplicar fracciones:");
+    System.out.println(f1.multiplica(f2, 2, 5));
+    System.out.println("Vamos a dividir " + f1 + " / " + f2);
+    System.out.println(f1.divide(f2, 2, 5));
   }
-  
 }
