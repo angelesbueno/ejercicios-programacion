@@ -12,14 +12,14 @@ public class PruebaTiempo {
   public static void main(String[] args) {
     
     Tiempo t = new Tiempo(1, 20, 30);
-    Tiempo t2 = new Tiempo(0,17,40);
+    Tiempo t2 = new Tiempo(0,50,40);
     
     System.out.println("Intervalo de tiempo 1: " + t);
     System.out.println("Intervalo de tiempo 2: " + t2);
-    System.out.println("Suma de los dos intervalos: " + t.suma(t2, 0, 17, 40));
-    System.out.println("Resta de los dos intervalos: " + t.resta(t2, 0, 17, 40));
+    System.out.println("Suma de los dos intervalos: " + t.suma(t2, 0, 50, 40));
+    System.out.println("Resta de los dos intervalos: " + t.resta(t2, 0, 50, 40));
     
-    // no salen bien los cálculos cuando hay salto de intervalos
+    // la suma sale bien pero la resta no
   }
   
 }

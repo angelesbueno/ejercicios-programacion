@@ -65,13 +65,13 @@ public class Tiempo {
     int resulSegundos = this.segundos + s;
     
     if (this.segundos + s >= 60) {
-      resulMinutos ++;
-      resulSegundos = (this.segundos + s) - 60;
+      resulMinutos = (this.segundos + s) / 60;
+      resulSegundos = (this.segundos + s) - (60 * resulMinutos);
     }
     
     if (this.minutos + m >= 60) {
-      resulHoras ++;
-      resulMinutos = (this.minutos + m) - 60;
+      resulMinutos += (this.minutos + m) - (60 * resulHoras);
+      resulHoras = resulHoras + (this.minutos + m) / 60;
     }
  
     return new Tiempo(resulHoras, resulMinutos, resulSegundos);
@@ -82,28 +82,13 @@ public class Tiempo {
     int resulMinutos = this.minutos - m;
     int resulSegundos = this.segundos - s;
     
-    if (this.horas - h == 0) {
-      resulHoras = 0;
-    }
-    
-    if (this.horas - h < 0) {
+    if (h > this.horas) {
       resulHoras = 0;
       resulMinutos = 0;
       resulSegundos = 0;
     }
     
-    if (this.minutos - m == 0) {
-      resulMinutos = 0;
-    }
-    
-    if (this.minutos - m < 0) {
-      resulMinutos = 0;
-      resulSegundos = 0;
-    }
-    
-    if (this.segundos - s <= 0) {
-      resulSegundos = 0;
-    }
+    // no sé cómo conseguir la resta
     
     return new Tiempo(resulHoras, resulMinutos, resulSegundos);
   }
