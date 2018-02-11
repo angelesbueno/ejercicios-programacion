@@ -30,13 +30,15 @@ public class PruebaEjercicio {
       System.out.println("6. Ver kilometraje del coche");
       System.out.println("7. Ver kilometraje total");
       System.out.println("8. Salir");
+      System.out.println("");
       System.out.print("Elige una opción (1-8): ");
       opcion = s.nextInt();
-      System.out.println("");
-
+      
       switch (opcion) {
         case 1: // anda con la bici
-          bici1.anda(15);
+          System.out.print("¿Cuántos kms quieres recorrer en bici?: ");
+          int kmBici = s.nextInt();
+          bici1.anda(kmBici);
           System.out.println("Me encanta salir con la bici");
           System.out.println("");
           break;
@@ -47,7 +49,9 @@ public class PruebaEjercicio {
           break;
 
         case 3: // anda con el coche
-          coche1.anda(133);
+          System.out.print("¿Cuántos kms quieres recorrer con el coche?: ");
+          int kmCoche = s.nextInt();
+          coche1.anda(kmCoche);
           System.out.println("¡Me encanta conducir!");
           System.out.println("");
           break;
