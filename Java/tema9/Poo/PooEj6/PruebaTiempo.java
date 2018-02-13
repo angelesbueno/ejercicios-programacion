@@ -17,7 +17,7 @@ public class PruebaTiempo {
     System.out.println("Intervalo de tiempo 1: " + t);
     System.out.println("Intervalo de tiempo 2: " + t2);
     System.out.println("Suma de los dos intervalos: " + t.suma(t2, 0, 50, 40));
-    System.out.println("Resta de los dos intervalos: " + t.resta(t2, 0, 50, 40));
+    System.out.println("Resta de los dos intervalos: " + t.resta(t2, 0, 20, 30));
     
     // la suma sale bien pero la resta no
   }

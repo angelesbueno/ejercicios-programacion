@@ -78,18 +78,12 @@ public class Tiempo {
   }
   
   public Tiempo resta(Tiempo otroTiempo, int h, int m, int s) {
-    int resulHoras = this.horas - h;
-    int resulMinutos = this.minutos - m;
-    int resulSegundos = this.segundos - s;
-    
-    if (h > this.horas) {
-      resulHoras = 0;
-      resulMinutos = 0;
-      resulSegundos = 0;
-    }
-    
-    // no sé cómo conseguir la resta
-    
-    return new Tiempo(resulHoras, resulMinutos, resulSegundos);
+   int resulSegundos = (h * 3600) + (m * 60) + s;
+   int resulHoras = resulSegundos / 3600;
+   resulSegundos -= resulHoras * 3600;
+   int resulMinutos = resulSegundos / 60;
+   resulSegundos -= resulMinutos * 60;
+   
+   return new Tiempo(resulHoras, resulMinutos, resulSegundos);
   }
 }
