@@ -1,10 +1,14 @@
-/**
- * Funciones matemáticas.
- *
- * @author Ángeles Bueno
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
- 
 package matematicas;
+
+/**
+ *
+ * @author Ángeles Bueno Aguilar
+ */
 public class Funciones {
   /**
    * Comprobar si un número es capicúa o no.
@@ -140,13 +144,24 @@ public class Funciones {
     return digito;
   }
   /**
-   * 8. Da la posición de la primera ocurrencia de un dígito dentro de un número entero. Si no se encuentra, devuelve -1.
+   * Da la posición de la primera ocurrencia de un dígito dentro de un número
+   * entero. Si no se encuentra, devuelve -1.
+   *
+   * @param x número entero
+   * @param d dígito a buscar dentro del número
+   * @return  posición de la primera ocurrencia del dígito dentro del número o
+   *          -1 si no se encuentra
    */
-  public static int posicionDeDigito(int n, int digito) {
+  public static int posicionDeDigito(int x, int d) {
     int i;
-    for (i = 0; (i < digitos(n)) && (digitoN(n, i) != digito); i++) {
+
+    for (i = 0; (i < digitos(x)) && (digitoN(x, i) != d); i++) {};
+
+    if (i == digitos(x)) {
+      return -1;
+    } else {
+      return i;
     }
-    return i == digitos(n) ? i : -1;
   }
   /**
    * Le quita a un número n dígitos por detrás (por la derecha).
@@ -200,13 +215,31 @@ public class Funciones {
     return x;
   }
   /**
-   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * Toma como parámetros las posiciones inicial y final dentro de un número y
+   * devuelve el trozo correspondiente.
+   * <p>
+   * Las posiciones se cuentan de izquierda a derecha comenzando por el cero.
+   *
+   * @param x      número entero
+   * @param inicio posición inicial
+   * @param fin    posición final
+   * @return       trozo de número compuesto por todos los dígitos que van desde
+   *               la posición inicial a la posición final incluyendo ambos
    */
-  //public static int trozoDeNumero(int x) {
-  //}
+  public static long trozoDeNumero(int x, int inicio, int fin) {
+    int longitud = digitos(x);
+    x = quitaPorDelante(x, inicio);
+    x = quitaPorDetras(x, longitud - fin - 1);
+    return x;
+  }
   /**
-   * Pega dos números para formar uno.
+   * Pega dos números para formar uno solo.
+   *
+   * @param x trozo que se pegará por la izquierda
+   * @param y trozo que se pegará por la derecha
+   * @return  número compuesto de los trozos <code>x</code> e <code>y</code>
    */
-  //public static int juntaNumeros(int x) {
-  //}
+  public static long juntaNumeros(int x, int y) {
+    return (long)(x * potencia(10, digitos(y))) + y;
+  }
 }
