@@ -9,6 +9,10 @@
  * @author Ángeles Bueno Aguilar
  */
 public class Coche extends Vehiculo{
+  
+  // atributo de coche
+  
+  private static int kilometrosRecorridos;
 
   // constructor
   
@@ -16,17 +20,30 @@ public class Coche extends Vehiculo{
   }
 
   public Coche(int kilometrosRecorridos) {
-    super(kilometrosRecorridos);
+    this.kilometrosRecorridos= kilometrosRecorridos;
   }
 
-  public Coche(String nombre) {
-    super(nombre);
-  }
-  
   // método quema rueda
  
   public void quemaRueda() {
     System.out.println("Mira cómo quemo rueda con el coche: XIIIIIIIII!");
+  }
+  
+  public void anda(int km) {
+    kilometrosRecorridos += km;
+    super.setKilometrosTotales(km);
+  }
+  
+  // setter
+
+  public static void setKilometrosRecorridos(int kilometrosRecorridos) {
+    Coche.kilometrosRecorridos = kilometrosRecorridos;
+  }
+  
+  // getter
+
+  public static int getKilometrosRecorridos() {
+    return kilometrosRecorridos;
   }
 }
   

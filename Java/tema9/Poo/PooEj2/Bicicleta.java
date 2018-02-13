@@ -10,17 +10,17 @@
  */
 public class Bicicleta extends Vehiculo{
 
+  // atributo de instancia
+  
+  private int kilometrosRecorridos;
+  
   // constructor
   
   public Bicicleta() {
   }
-  
-  public Bicicleta(String nombre) {
-    super(nombre);
-  }
-
+ 
   public Bicicleta(int kilometrosRecorridos) {
-    super(kilometrosRecorridos);
+    this.kilometrosRecorridos = kilometrosRecorridos;
   }
   
   // métodos concretos bicicleta
@@ -28,4 +28,27 @@ public class Bicicleta extends Vehiculo{
   public void hazCaballito() {
     System.out.println("Mira cómo hago el caballito: FIUUUUUUUUU!");
   }
+  
+  public void anda(int km) {
+    kilometrosRecorridos += km;
+    super.setKilometrosTotales(km);
+    
+  }
+  
+  // getter
+
+  public int getKilometrosRecorridos() {
+    return kilometrosRecorridos;
+  }
+  
+  
+  // setter
+
+  public void setKilometrosRecorridos(int kilometrosRecorridos) {
+    this.kilometrosRecorridos = kilometrosRecorridos;
+  }
+  
+  
+  
+  
 }
