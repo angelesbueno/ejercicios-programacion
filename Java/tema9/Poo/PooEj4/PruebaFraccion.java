@@ -24,6 +24,6 @@ public class PruebaFraccion {
     System.out.println("Vamos a dividir " + f1 + " / " + f2);
     System.out.println(f1.divide(f2, 2, 5));
     System.out.println("Vamos a simplificar una fracción:");
-    System.out.println(f1.simplifica());
+    System.out.println(f3.simplifica());
   }
 }

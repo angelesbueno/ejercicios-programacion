@@ -84,7 +84,7 @@ public class Fraccion {
       }
     }
 
-    return new Fraccion(s * n, d);
+    return new Fraccion(n, d);
   }
   
   // divide
