@@ -15,6 +15,7 @@ public class Fraccion {
  
   int numerador;
   int denominador;
+  private int signo;
   
   // constructor
 
@@ -69,6 +70,22 @@ public class Fraccion {
   }
   
   // simplifica
+  
+  public Fraccion simplifica() {
+    
+    int s = this.signo;
+    int n = this.numerador;
+    int d = this.denominador;
+      
+    for (int i = 2; i < Math.min(this.numerador, this.denominador); i++) {
+      while (((n % i) == 0) && ((d % i) == 0)) {
+        n /= i;
+        d /= i;
+      }
+    }
+
+    return new Fraccion(s * n, d);
+  }
   
   // divide
   

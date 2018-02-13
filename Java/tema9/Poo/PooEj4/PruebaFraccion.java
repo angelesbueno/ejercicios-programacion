@@ -14,7 +14,7 @@ public class PruebaFraccion {
     
     Fraccion f1 = new Fraccion(1,3);
     Fraccion f2 = new Fraccion(2,5);
-    Fraccion f3 = new Fraccion(0,0);
+    Fraccion f3 = new Fraccion(24,16);
 
     System.out.println(f1);    
     System.out.println("Vamos a invertir la fracción:");
@@ -23,5 +23,7 @@ public class PruebaFraccion {
     System.out.println(f1.multiplica(f2, 2, 5));
     System.out.println("Vamos a dividir " + f1 + " / " + f2);
     System.out.println(f1.divide(f2, 2, 5));
+    System.out.println("Vamos a simplificar una fracción:");
+    System.out.println(f1.simplifica());
   }
 }
