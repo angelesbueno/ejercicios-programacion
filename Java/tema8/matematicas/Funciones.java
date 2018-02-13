@@ -401,4 +401,46 @@ public class Funciones {
   public static int juntaNumeros(int x, int y) {
     return (int)(juntaNumeros((long)x, (long)y));
   }
+  /**
+   * Convierte un número decimal (base 10) a binario (base 2).
+   *
+   * @param decimal número en base 10 que se convertirá a binario.
+   *
+   * @return  número decimal convertido a binario.
+   */
+  public static long decimalABinario(int decimal) {
+  
+    if (decimal == 0) {
+      return 0;
+    }
+      
+    long binario = 1;
+    
+    while (decimal > 1) {
+      binario = matematicas.Funciones.pegaPorDetras(binario, decimal % 2);
+      decimal = decimal / 2;
+    }
+    binario = matematicas.Funciones.pegaPorDetras(binario, 1);
+    binario = matematicas.Funciones.voltea(binario);
+    binario = matematicas.Funciones.quitaPorDetras(binario, 1);
+    
+    return binario;
+  }
+  /**
+   * Convierte un número binario (base 2) a decimal (base 10).
+   *
+   * @param binario número en base 2 que se convertirá a decimal.
+   *
+   * @return  número binario convertido a decimal.
+   */
+  public static long binarioADecimal(long binario) {
+    
+    int bits = matematicas.Funciones.digitos(binario);
+    long decimal = 0;
+    
+    for(int i = 0; i < bits; i++) {
+      decimal += matematicas.Funciones.digitoN(binario, bits - i - 1) * matematicas.Funciones.potencia(2, i);
+    }
+    return decimal;
+  }
 }
