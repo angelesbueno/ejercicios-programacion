@@ -317,6 +317,18 @@ public class Funciones {
    * @return  número inicial <code>x</code> con el dígito <code>d</code> pegado
    *          por la derecha
    */
+  public static long pegaPorDetras(long x, long d) {
+    return juntaNumeros(x, d);
+  }
+
+  /**
+   * Añade un dígito a un número por detrás (por la derecha).
+   *
+   * @param x número entero
+   * @param d dígito que se le va a pegar por la derecha
+   * @return  número inicial <code>x</code> con el dígito <code>d</code> pegado
+   *          por la derecha
+   */
   public static int pegaPorDetras(int x, int d) {
     return (int)pegaPorDetras((long)x, d);
   }
@@ -402,14 +414,86 @@ public class Funciones {
     return (int)(juntaNumeros((long)x, (long)y));
   }
   /**
-   * Convierte un número decimal (base 10) a binario (base 2).
-   *
-   * @param decimal número en base 10 que se convertirá a binario.
-   *
-   * @return  número decimal convertido a binario.
+   * Pasa un número binario (en base 2) a octal (base 8).
+   * 
+   * @param binario número entero en binario
+   * @return        número inicial pasado a octal
    */
-  public static long decimalABinario(int decimal) {
+  public static long binarioAOctal(long binario) {
+    long octal = 1;
   
+    while (binario > 0) {
+      octal = octal * 10 + (binarioADecimal(binario % 1000));
+      binario = binario / 1000;
+    };
+  
+    octal = matematicas.Funciones.pegaPorDetras(octal, 1);
+    octal = matematicas.Funciones.voltea(octal);
+    octal = matematicas.Funciones.quitaPorDetras(octal, 1);
+    octal = matematicas.Funciones.quitaPorDelante(octal, 1);
+    
+    return octal;
+  }
+  
+  /**
+   * Pasa un número binario (en base 2) a decimal (base 10).
+   * 
+   * @param binario número entero en binario
+   * @return        número inicial pasado a decimal
+   */
+  public static long binarioADecimal(long binario) {
+    long decimal = 0;
+  
+    int bits = matematicas.Funciones.digitos(binario);
+    
+    for(int i = 0; i < bits; i++) {
+      decimal += matematicas.Funciones.digitoN(binario, bits - i - 1) * matematicas.Funciones.potencia(2, i);
+    }
+      
+    return decimal;
+  }
+  
+  /**
+   * Pasa un número binario (en base 2) a hexadecimal (base 16).
+   * 
+   * @param binario número entero en binario
+   * @return        número inicial pasado a hexadecimal
+   */
+   public static String binarioAHexadecimal(long binario) {
+    String hexadecimal = "";
+    String digitosHexa = "0123456789ABCDEF";
+  
+    while (binario > 0) {
+      hexadecimal = digitosHexa.charAt((int)binarioADecimal(binario % 10000)) + hexadecimal;
+      binario = binario / 10000;
+    };
+      
+    return hexadecimal;
+  }
+  
+  /**
+   * Pasa un número octal (en base 8) a binario (base 2).
+   * 
+   * @param octal número entero en octal
+   * @return      número inicial pasado a binario
+   */
+  public static long octalABinario(long octal) {
+    long binario = 0;
+  
+    for (int i = 0; i < matematicas.Funciones.digitos(octal); i++) {
+      binario = binario * 1000 + decimalABinario(matematicas.Funciones.digitoN(octal, i));
+    }
+    
+    return binario;
+  }
+  
+  /**
+   * Pasa un número decimal (en base 10) a binario (base 2).
+   * 
+   * @param decimal número entero en decimal
+   * @return      número inicial pasado a binario
+   */
+  public static long decimalABinario(long decimal) {
     if (decimal == 0) {
       return 0;
     }
@@ -417,7 +501,7 @@ public class Funciones {
     long binario = 1;
     
     while (decimal > 1) {
-      binario = matematicas.Funciones.pegaPorDetras(binario, decimal % 2);
+      binario = matematicas.Funciones.pegaPorDetras(binario, (int)decimal % 2);
       decimal = decimal / 2;
     }
     binario = matematicas.Funciones.pegaPorDetras(binario, 1);
@@ -426,21 +510,21 @@ public class Funciones {
     
     return binario;
   }
+
   /**
-   * Convierte un número binario (base 2) a decimal (base 10).
-   *
-   * @param binario número en base 2 que se convertirá a decimal.
-   *
-   * @return  número binario convertido a decimal.
+   * Pasa un número hexadecimal (en base 10) a binario (base 2).
+   * 
+   * @param hexadecimal número entero en hexadecimal
+   * @return            número inicial pasado a binario
    */
-  public static long binarioADecimal(long binario) {
-    
-    int bits = matematicas.Funciones.digitos(binario);
-    long decimal = 0;
-    
-    for(int i = 0; i < bits; i++) {
-      decimal += matematicas.Funciones.digitoN(binario, bits - i - 1) * matematicas.Funciones.potencia(2, i);
+  public static long hexadecimalABinario(String hexadecimal) {
+    String digitosHexa = "0123456789ABCDEF";
+    long binario = 0;
+  
+    for (int i = 0; i < hexadecimal.length(); i++) {
+      binario = binario * 10000 + decimalABinario(digitosHexa.indexOf(hexadecimal.charAt(i)));
     }
-    return decimal;
+
+    return binario;
   }
 }

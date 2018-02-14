@@ -78,7 +78,9 @@ public class ConversorCualquierBase {
         resultado = Long.toString(matematicas.Funciones.binarioADecimal(matematicas.Funciones.hexadecimalABinario(numeroIntroducidoString)));
         break;
     }
+    
     System.out.println(resultado);
   }
 }
+    
 
