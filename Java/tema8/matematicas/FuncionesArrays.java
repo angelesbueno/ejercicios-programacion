@@ -106,7 +106,25 @@ public class FuncionesArrays {
       System.out.println("El número " + num + " no se encuentra en el array");
     }
   }
-  
+  /**
+   * Dice si un número está dentro de un array o no
+   * @param x array de una dimensión de números enteros
+   * @param num número entero que se pasa por parámetro para saber en qué posición está en el array
+   * @return la posición del número
+   */
+  public static int posicionEnArray(int[] x, int num) {
+    
+    int posicion = 0;
+    
+    for (int i = 0; i < x.length; i++) {
+      
+      if (x[i] == num) {
+        posicion = i;
+      }
+      
+    }
+    return posicion;
+  }
   
   
   
