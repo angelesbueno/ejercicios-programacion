@@ -117,6 +117,41 @@ public class FuncionesArraysBi {
     }
     return y;
   }
+  /**
+   * Devuelve un array de una dimensión con dos elementos, la fila y la columna
+   * de la primera ocurrencia de un número dentro de un array bidimensional.
+   * Si el número no está en el array, devuelve -1, -1.
+     parámetro.
+   * @param x array bidimiensional de números enteros
+   * @param f número de filas que tiene el array bidimensional
+   * @param c número de columnas que tiene el array bidimensional
+   * @param n número a comprobar si existe dentro del array bidimensional
+   * @return el array de una dimensión con dos elementos, la fila y la columna
+   * de la primera ocurrencia del número dentro del array bidimensional.
+   */
+  public static int[] coordenadasEnArrayBiInt(int x[][], int f, int c, int n) {
+    
+    boolean estaEnArray = false;
+    int[] y = new int[2];
+    y[0] = -1;
+    y[1] = -1;
+    int fila;
+    int columna;
+    
+    for (fila = 0; fila < f; fila++) {
+      for (columna = 0; columna < c; columna ++) {
+        if (x[fila][columna] == n) {
+          y[0] = fila;
+          y[1] = columna;
+          estaEnArray = true;
+          columna = c;
+          fila = f;
+        }
+      }  
+    }
+    return y;
+  }
+  
   
 }
   
