@@ -94,6 +94,29 @@ public class FuncionesArraysBi {
     }
     return y;
   }
+  /**
+   * Devuelve la columna i-ésima del array que se pasa como
+     parámetro.
+   * @param x array bidimiensional de números enteros
+   * @param f número de filas que tiene el array bidimensional
+   * @param c número de columnas que tiene el array bidimensional
+   * @param nColumna número de columna del que se quieren extraer los números
+   * @return los números de la columna metidos en un array de una dimensión
+   */
+  public static int[] columnaDeArrayBiInt(int x[][], int f, int c, int nColumna) {
+    
+    int fila, columna;
+    int[] y = new int[f];
+    
+    for (fila = 0; fila < f; fila++) {
+      for (columna = 0; columna < c; columna ++) {
+        if (columna == nColumna) {
+          y[fila] = x[fila][columna]; 
+        }
+      }
+    }
+    return y;
+  }
   
 }
   
