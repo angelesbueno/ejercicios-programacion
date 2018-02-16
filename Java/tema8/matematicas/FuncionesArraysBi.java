@@ -88,10 +88,10 @@ public class FuncionesArraysBi {
     for (fila = 0; fila < f; fila++) {
       for (columna = 0; columna < c; columna ++) {
         if (fila == nFila) {
-          y[fila] = x[fila][columna]; 
+          y[columna] = x[fila][columna]; 
         }
       }
-    }// no sale; revisar
+    }
     return y;
   }
   
