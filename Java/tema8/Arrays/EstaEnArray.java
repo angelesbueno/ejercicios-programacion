@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package estaenarray;
-
+import java.util.Scanner;
 /**
  *
  * @author Ángeles Bueno Aguilar
@@ -12,8 +12,20 @@ package estaenarray;
 public class EstaEnArray {
   public static void main(String[] args) {
     
+    Scanner s = new Scanner(System.in);
     int[] x = matematicas.FuncionesArrays.generaArrayInt(5, 0, 9);
     matematicas.FuncionesArrays.muestraArrayInt(x);
-    matematicas.FuncionesArrays.estaEnArray(x, 3);
+    System.out.println("¿Qué número quieres saber si está en el array?: ");
+    int num = s.nextInt();
+    
+    if (matematicas.FuncionesArrays.estaEnArray(x, num)) {
+      System.out.println("El número " + num + " está en el array");
+    } else {
+      System.out.println("El número " + num + " no está en el array");
+    }
   }
+  
+  
+  
 }
+

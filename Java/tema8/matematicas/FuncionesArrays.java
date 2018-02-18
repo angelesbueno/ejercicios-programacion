@@ -90,8 +90,9 @@ public class FuncionesArrays {
    * Dice si un número está dentro de un array o no
    * @param x array de una dimensión de números enteros
    * @param num número entero que se pasa por parámetro para saber si está dentro del array o no
+   * @return  verdadero si el número se encuentra en el array
    */
-  public static void estaEnArray(int[] x, int num) {
+  public static boolean estaEnArray(int[] x, int num) {
     
     boolean estaEnArray = false;
     
@@ -101,29 +102,31 @@ public class FuncionesArrays {
       }   
     }
     if (estaEnArray) {
-      System.out.println("El número " + num + " sí se encuentra en el array");
-    } else {
-      System.out.println("El número " + num + " no se encuentra en el array");
-    }
+      return true;
+    } 
+    return false;
   }
   /**
    * Dice si un número está dentro de un array o no
    * @param x array de una dimensión de números enteros
    * @param num número entero que se pasa por parámetro para saber en qué posición está en el array
-   * @return la posición del número
+   * @return la posición del número, si el número está en el array. Si no está, devuelve -1
    */
   public static int posicionEnArray(int[] x, int num) {
-    
+    boolean estaEnArray = false;
     int posicion = 0;
     
     for (int i = 0; i < x.length; i++) {
-      
       if (x[i] == num) {
         posicion = i;
+        estaEnArray = true;
       }
-      
     }
-    return posicion;
+    if (estaEnArray) {
+      return posicion;
+    } else {
+    return -1;
+    }
   }
   /**
    * Le da la velta a un array

@@ -151,6 +151,36 @@ public class FuncionesArraysBi {
     }
     return y;
   }
+ /**
+   * Dice si un número que se encuentra en una posición determinada de
+   * una matriz (un array bidimensional) que se pasa como parámetro es o
+   * no punto de silla.
+   * <p>
+   * El punto de silla cumple la condición de ser el mínimo en su fila y
+   * máximo en su columna.
+   * 
+   * @param x array bidimiensional de números enteros
+   * @param i fila dentro del array <code>x</code>
+   * @param j columna dentro del array <code>x</code>
+   */ 
+  public static void esPuntoDeSilla(int x[][], int i, int j) {
+    
+    int f = x.length;
+    int c = x[0].length;
+    int[] y = filaDeArrayBiInt(x, f, c, i); // array de la fila
+    int[] z = columnaDeArrayBiInt(x, f, c, j); // array de la columna
+    //matematicas.FuncionesArrays.muestraArrayInt(y);
+    //matematicas.FuncionesArrays.muestraArrayInt(z);
+    
+    int minFila = matematicas.FuncionesArrays.minimoArrayInt(y);
+    int maxColumna = matematicas.FuncionesArrays.maximoArrayInt(z);
+    
+    if ((x[i][j] == minFila) && (x[i][j] == maxColumna)) {
+      System.out.println("El número " + x[i][j] + " es punto de silla");
+    } else {
+      System.out.println("El número " + x[i][j] + " no es punto de silla");
+    }
+  }
   
   
 }
