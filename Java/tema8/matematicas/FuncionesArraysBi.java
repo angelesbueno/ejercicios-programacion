@@ -34,7 +34,7 @@ public class FuncionesArraysBi {
     return x;
   }
   /**
-   * Genera un array bidimensional de tamaño f x c con números aleatorios 
+   * Genera un array bidimensional de tamaño f x c con números aleatorios entre 0 y 10. 
    * @param f número entero que indica el tamaño de las filas del array
    * @param c número entero que indica el tamaño de las columnas del array
    * @return array generado
